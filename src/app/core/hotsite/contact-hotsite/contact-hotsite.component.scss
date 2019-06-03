@@ -1,0 +1,44 @@
+.footer {
+    background: #444;
+}
+
+.separator {
+    background: #f17221;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    font-size: 32px;
+    vertical-align: middle;
+    margin: 5px;
+}
+.column {
+    font-size: 24px;
+    min-height: 64px;
+    background-color: #f17221;
+    color: white;
+    border-color: #d46a28;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.column:first-child{
+    border-radius: 15px 0 0 15px;
+}
+
+.column:last-child{
+    border-radius: 0 15px 15px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .column:first-child{
+        border-radius: 15px 15px 0 0;
+    }
+
+    .column:last-child{
+        border-radius: 0 0 15px 15px ;
+    }
+}

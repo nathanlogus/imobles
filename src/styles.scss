@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import "initial-variables";
+@import "functions";
+
+$primary: #cc4125;
+$info: #f4bd2d;
+$link: #1c7de1;
+$success: #4bacc6;
+$warning: #f07624;
+
+$size-1: 2rem;
+$size-2: 1.6rem;
+$size-3: 1.4rem;
+$size-4: 1.2em;
+$size-5: 1.2rem;
+$size-6: 1rem;
+$size-7: 1rem;
+
+$family-sans-serif: 'Open Sans', sans-serif;
+@import "bulma";
+
+html {
+    @include tablet {
+      font-size: 16px;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+.icon {
+  font-size: 36px;
+}
+
+gallery {
+  background-color: white !important;
+}
+
+gallery-dots {
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.4);
+}

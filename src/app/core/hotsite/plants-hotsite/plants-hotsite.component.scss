@@ -1,0 +1,38 @@
+.hero {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.tabs.is-toggle li.is-active a {
+    background-color: #f17221 !important;
+    border-color: #f17221 !important;
+}
+
+.separator {
+    background: #f17221;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table {
+    margin-top: 50px;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.price {
+    background-color: #f88842;
+    border: 0;
+    font-weight: bold;
+    height: 82px;
+    position: absolute;
+    right: 0;
+    border-radius: 0;
+    color: white;
+    box-shadow: 10px 10px #f17221;
+
+}
+
+.price:hover {
+    color: white;
+}

@@ -1,0 +1,14 @@
+.navbar {
+    background: transparent;
+}
+
+.scroll {
+    background-color: #fff;
+    -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+    -moz-transition: background .5s ease-in-out, opacity .5s ease;
+    transition: background .5s ease-in-out, opacity .5s ease;
+}
+
+.navbar-brand {
+    padding: 5px;
+}

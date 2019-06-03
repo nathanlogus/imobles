@@ -1,0 +1,25 @@
+.brand {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.hero {
+    background: #000;
+    background-image: linear-gradient(to right, rgba(3, 28, 35, 1), rgba(0, 0, 0, 0)), url('/assets/img/terramundi/praca-flores.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.title {
+    font-size: 60px
+}
+
+.subtitle {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.button i{
+    margin-right: 15px;
+}

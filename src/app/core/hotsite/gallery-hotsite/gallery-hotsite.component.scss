@@ -1,0 +1,23 @@
+gallery {
+    height: 600px;
+}
+
+.columns {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.chat {
+    font-weight: bold;
+    height: 82px;
+    position: absolute;
+    right: 0;
+    border-radius: 0;
+    color: white;
+    box-shadow: 10px 10px #f17221;
+
+}
+
+.chat:hover {
+    color: white;
+}

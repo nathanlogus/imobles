@@ -1,0 +1,16 @@
+.hero {
+    background: #000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,0.6)), url('/assets/img/hero.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.title {
+    font-size: 60px
+}
+
+.subtitle {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 25px;
+}

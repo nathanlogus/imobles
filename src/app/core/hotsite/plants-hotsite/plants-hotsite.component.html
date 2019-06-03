@@ -1,0 +1,45 @@
+<section class="hero is-large has-text-centered">
+  <div class="hero-head">
+    <div class="container content">
+      <h1 class="header">Apartamentos de 2 e 3 Quartos</h1>
+      <hr class="separator" width="160px">
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-half-desktop is-half-tablet is-one-mobile">
+      <gallery id="plants"></gallery>
+    </div>
+    <div class="column" style="margin: 3em">
+      <div class="tabs is-toggle is-toggle-rounded is-fullwidth">
+        <ul>
+          <li id="first-plant" (click)="goTo(0, $event)" class="is-active"><a>2 Quartos<br>(64m²)</a></li>
+          <li id="second-plant" (click)="goTo(1, $event)"><a>3 Quartos<br>(88m²)</a></li>
+          <li id="third-plant" (click)="goTo(2, $event)"><a>3 Quartos<br>(90m²)</a></li>
+        </ul>
+      </div>
+
+      <table class="table is-striped">
+        <tbody>
+          <tr>
+            <th>Área</th>
+            <th>{{ area }}</th>
+          </tr>
+          <tr>
+            <th>Quartos</th>
+            <th>{{ rooms }}</th>
+          </tr>
+          <tr>
+            <th>Vagas de Garagem</th>
+            <th>{{ garage }}</th>
+          </tr>
+          <tr>
+            <th>Sacada com Churrasqueira</th>
+            <th>{{ balcony }}</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <a class="price button is-large">Pergunte o Preço <i class="la la-caret-right"></i></a>
+    </div>
+  </div>
+</section>

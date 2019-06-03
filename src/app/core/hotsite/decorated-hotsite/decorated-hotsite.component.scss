@@ -1,0 +1,28 @@
+gallery {
+    height: 650px;
+}
+
+.hero-head {
+    background-color: #e3e3e3;
+    padding: 2em;
+}
+
+.separator {
+    background: #2cd48f;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visit {
+    background-color: #138082;
+    font-weight: bold;
+    border: 0;
+    z-index: 2;
+    height: 82px;
+    position: absolute;
+    left: 0;
+    border-radius: 0;
+    color: white;
+    box-shadow: -10px 10px #136b82;
+
+}

@@ -1,0 +1,40 @@
+.hero {
+    padding: 3em;
+    background: rgb(3, 28, 35);
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+    content: "\25A0";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: orange; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.separator {
+    background: orange;
+    margin-left: -5px;
+}
+
+.content {
+    margin-top: 3em;
+}
+
+.hero:after {
+    content:'';
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: -65px;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 25px rgb(3, 28, 35);;
+    border-left: solid 25px transparent;
+    border-right: solid 25px transparent;
+}
