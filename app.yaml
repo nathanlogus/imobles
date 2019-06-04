@@ -16,6 +16,3 @@ handlers:
     redirect_http_response_code: 301
     static_files: dist/imobles/index.html
     upload: dist/imobles/index.html
-      http_headers:
-        Strict-Transport-Security: max-age=31536000; includeSubDomains
-        X-Frame-Options: DENY
