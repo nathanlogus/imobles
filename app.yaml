@@ -2,7 +2,7 @@ runtime: nodejs8
 
 handlers:
   - url: /
-      static_files: dist/imobles/index.html
+    static_files: dist/imobles/index.html
     upload: dist/imobles/index.html
     secure: always
 
