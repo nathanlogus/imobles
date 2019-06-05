@@ -1,13 +1,20 @@
-runtime: nodejs8
+runtime: python27
+api_version: 1
+threadsafe: true
 
 handlers:
-  - url: /
-    static_files: dist/imobles/index.html
-    upload: dist/imobles/index.html
-    secure: always
-    
-  - url: /.*
-    secure: always
-    redirect_http_response_code: 301
-    static_files: dist/imobles/index.html
-    upload: dist/imobles/index.html
+- url: /
+  static_files: dist/imobles/index.html
+  upload: dist/imobles/index.html
+
+- url: /(.*)
+  static_files: dist/imobles/\1
+  upload: dist/imobles/(.*)
+
+- url: /(.*\.(gif|png|jpg|css|js)(|\.map))$
+ static_files: dist/\1
+ upload: dist/imobles/(.*)(|\.map)
+
+- url: /(.*)
+  static_files: dist/index.html
+  upload: dist/imobles/index.html
