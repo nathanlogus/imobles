@@ -3,7 +3,7 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /(.*\.(gif|png|jpg|css|js)(|\.map))$
+- url: /(.*\.(gif|png|jpg|css|js|svg)(|\.map))$
   static_files: dist/\1
   upload: dist/(.*)(|\.map)
 
