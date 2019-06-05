@@ -12,8 +12,8 @@ handlers:
   upload: dist/imobles/(.*)
 
 - url: /(.*\.(gif|png|jpg|css|js)(|\.map))$
- static_files: dist/\1
- upload: dist/imobles/(.*)(|\.map)
+  static_files: dist/\1
+  upload: dist/imobles/(.*)(|\.map)
 
 - url: /(.*)
   static_files: dist/index.html
