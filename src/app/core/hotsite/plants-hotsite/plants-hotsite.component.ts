@@ -7,11 +7,13 @@ import { GalleryConfig, Gallery, GalleryRef, ImageItem } from '@ngx-gallery/core
   styleUrls: ['./plants-hotsite.component.scss']
 })
 export class PlantsHotsiteComponent implements OnInit {
+
   area: string = "64m²";
   rooms: string = "1 Suíte";
   garage: string = "1";
   balcony: string = "Sim";
   galleryId = 'plants';
+  galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
   galleryConfig: GalleryConfig = {
     imageSize: "contain",
     nav: false,
@@ -37,39 +39,65 @@ export class PlantsHotsiteComponent implements OnInit {
     galleryRef.load(items);
   }
 
-  goTo(index, event){
+  goTo(index, event) {
     let elementId = event.srcElement.parentElement.id;
-    
-    const galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
-    galleryRef.set(index);
+    this.galleryRef.set(index);
 
-    if(elementId == 'first-plant'){
+    if (elementId == 'first-plant') {
       document.getElementById('first-plant').classList.add('is-active');
       document.getElementById('second-plant').classList.remove('is-active');
       document.getElementById('third-plant').classList.remove('is-active');
-      this.area  = "64m²";
+      this.area = "64m²";
       this.rooms = "1 Suíte";
       this.garage = "1";
       this.balcony = "Sim";
-    } else if (elementId == 'second-plant'){
+    } else if (elementId == 'second-plant') {
       document.getElementById('first-plant').classList.remove('is-active');
       document.getElementById('second-plant').classList.add('is-active');
       document.getElementById('third-plant').classList.remove('is-active');
-      this.area  = "88m²";
+      this.area = "88m²";
       this.rooms = "3 Suítes";
       this.garage = "1";
       this.balcony = "Sim";
-    } else if (elementId == 'third-plant'){
+    } else if (elementId == 'third-plant') {
       document.getElementById('first-plant').classList.remove('is-active');
       document.getElementById('second-plant').classList.remove('is-active');
       document.getElementById('third-plant').classList.add('is-active');
-      this.area  = "89m²";
+      this.area = "89m²";
       this.rooms = "3 Suítes";
       this.garage = "2";
       this.balcony = "Sim";
     }
+  }
 
-
+  indexChanged() {
+    this.galleryRef.state.source.subscribe(value => {
+      if (value.currIndex == 0) {
+        document.getElementById('first-plant').classList.add('is-active');
+        document.getElementById('second-plant').classList.remove('is-active');
+        document.getElementById('third-plant').classList.remove('is-active');
+        this.area = "64m²";
+        this.rooms = "1 Suíte";
+        this.garage = "1";
+        this.balcony = "Sim";
+      } else if (value.currIndex == 1) {
+        document.getElementById('first-plant').classList.remove('is-active');
+        document.getElementById('second-plant').classList.add('is-active');
+        document.getElementById('third-plant').classList.remove('is-active');
+        this.area = "88m²";
+        this.rooms = "3 Suítes";
+        this.garage = "1";
+        this.balcony = "Sim";
+      } else if (value.currIndex == 2) {
+        document.getElementById('first-plant').classList.remove('is-active');
+        document.getElementById('second-plant').classList.remove('is-active');
+        document.getElementById('third-plant').classList.add('is-active');
+        this.area = "89m²";
+        this.rooms = "3 Suítes";
+        this.garage = "2";
+        this.balcony = "Sim";
+      }
+    });
   }
 
 }

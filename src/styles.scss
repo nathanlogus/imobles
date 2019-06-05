@@ -22,7 +22,10 @@ $size-7: 1rem;
 $family-sans-serif: 'Open Sans', sans-serif;
 @import "bulma";
 
-html {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    
     @include tablet {
       font-size: 16px;
     }

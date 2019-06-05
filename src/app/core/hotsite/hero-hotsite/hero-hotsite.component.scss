@@ -5,9 +5,11 @@
 
 .hero {
     background: #000;
-    background-image: linear-gradient(to right, rgba(3, 28, 35, 1), rgba(0, 0, 0, 0)), url('/assets/img/terramundi/praca-flores.jpg');
+    background-image: linear-gradient(to right, rgba(3, 28, 35, 1), rgba(0, 0, 0, 0)), url('/assets/img/terramundi/fachada-dia.jpg');
     background-position: center;
+    background-position-y: 90%;
     background-size: cover;
+    height: 100vh;
 }
 
 .title {
@@ -15,9 +17,8 @@
 }
 
 .subtitle {
-    font-size: 19px;
+    font-size: 40px;
     font-weight: 300;
-    line-height: 25px;
 }
 
 .button i{

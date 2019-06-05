@@ -8,6 +8,10 @@ gallery {
 }
 
 .chat {
+    margin-top: 40px;
+    padding: 2em;
+    background-color: #f88842;
+    border: 0;
     font-weight: bold;
     height: 82px;
     position: absolute;
@@ -15,7 +19,6 @@ gallery {
     border-radius: 0;
     color: white;
     box-shadow: 10px 10px #f17221;
-
 }
 
 .chat:hover {
