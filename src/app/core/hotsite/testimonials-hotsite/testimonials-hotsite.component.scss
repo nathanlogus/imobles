@@ -1,5 +1,6 @@
 .section {
-    padding: 0;
+    padding: 3em;
+    background: rgb(3, 28, 35);
 }
 
 .separator {
@@ -12,12 +13,10 @@
     padding: 3em;
 }
 
-div.columns > div:nth-of-type(odd) {
-    background: #f3f3f3;
-}
 
-div.columns > div:nth-of-type(even) {
-    background: #e0e0e0;
+div.columns:first{
+    
+    border-radius: 25px;
 }
 
 figure {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryModule } from  '@ngx-gallery/core';
-
+import { RouterModule } from '@angular/router';
 
 import { HotsiteComponent } from './hotsite.component';
 import { HeroHotsiteComponent } from '../core/hotsite/hero-hotsite/hero-hotsite.component';
@@ -17,6 +17,7 @@ import { ConceptHotsiteComponent } from '../core/hotsite/concept-hotsite/concept
 import { OthersHotsiteComponent } from '../core/hotsite/others-hotsite/others-hotsite.component';
 import { TestimonialsHotsiteComponent } from '../core/hotsite/testimonials-hotsite/testimonials-hotsite.component';
 import { ContactHotsiteComponent } from '../core/hotsite/contact-hotsite/contact-hotsite.component';
+import { FooterHotsiteComponent } from '../core/hotsite/footer-hotsite/footer-hotsite.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +33,14 @@ import { ContactHotsiteComponent } from '../core/hotsite/contact-hotsite/contact
     OthersHotsiteComponent,
     TestimonialsHotsiteComponent,
     ContactHotsiteComponent,
+    FooterHotsiteComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     GalleryModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ]
 })
 export class HotsiteModule { }

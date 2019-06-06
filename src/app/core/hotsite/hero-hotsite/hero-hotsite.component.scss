@@ -9,15 +9,15 @@
     background-position: center;
     background-position-y: 90%;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .title {
-    font-size: 60px
+    font-size: 3.5em;
 }
 
 .subtitle {
-    font-size: 40px;
+    font-size: 2em;
     font-weight: 300;
 }
 

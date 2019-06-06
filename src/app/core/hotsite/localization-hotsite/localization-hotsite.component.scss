@@ -1,5 +1,11 @@
 gallery {
-    height: 650px;
+    height: 450px;
+}
+
+@media screen and (max-width: 768px) {
+    gallery {
+        height: 300px;
+    }
 }
 
 .columns {

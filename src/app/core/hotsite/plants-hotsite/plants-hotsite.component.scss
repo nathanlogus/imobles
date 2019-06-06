@@ -3,6 +3,17 @@
     margin-bottom: 50px;
 }
 
+.center {
+    background: Red;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabs li {
+    max-width: 100px;
+}
+
 .tabs.is-toggle li.is-active a {
     background-color: #f17221 !important;
     border-color: #f17221 !important;
