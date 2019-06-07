@@ -24,7 +24,7 @@ export class ConceptHotsiteComponent implements OnInit {
 
   ngOnInit() {
     const galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
-    galleryRef.addIframe({ src: 'https://www.youtube.com/embed/rEJ2CWZZN-U' });
+    galleryRef.addIframe({ src: 'https://www.youtube.com/embed/XoqJlQlZ4EA' });
   }
 
 }

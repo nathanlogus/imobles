@@ -2,6 +2,12 @@ gallery {
     height: 600px;
 }
 
+@media screen and (max-width: 768px) {
+    gallery {
+        height: 350px;
+    }
+}
+
 .columns {
     margin-top: 50px;
     margin-bottom: 50px;

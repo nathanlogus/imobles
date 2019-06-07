@@ -20,7 +20,39 @@
         <li>Porque a entrada é <strong>FACILITADA</strong> e os planos de pagamento são personalizados!</li>
         <li>Porque se você comprar agora poderá escolher as <strong>MELHORES UNIDADES!</strong></li>
       </ol>
-      <a class="chat button is-large">Simule seu <br>plano de Pagamento<i class="la la-caret-right"></i></a>
+      <a class="chat button is-large" (click)="openModal()">Simule seu <br>plano de Pagamento<i class="la la-caret-right"></i></a>
     </div>
   </div>
 </section>
+
+<div class="modal" #galleryModal>
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Te ligamos agora mesmo!</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      <div class="field">
+        <div class="control has-icons-left">
+          <input class="input" type="text" placeholder="Seu nome">
+          <span class="icon is-small is-left">
+            <i class="la la-user"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control has-icons-left">
+          <input class="input" type="text" placeholder="Seu telefone">
+          <span class="icon is-small is-left">
+            <i class="la la-phone-square"></i>
+          </span>
+        </div>
+      </div>
+
+    <a class="button is-primary is-medium is-fullwidth is-uppercase">Me ligue grátis</a>
+    </section>
+  </div>
+</div>

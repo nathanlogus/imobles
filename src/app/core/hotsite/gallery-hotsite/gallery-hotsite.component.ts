@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { GalleryRef, Gallery, GalleryConfig } from '@ngx-gallery/core';
 
 @Component({
@@ -7,6 +7,8 @@ import { GalleryRef, Gallery, GalleryConfig } from '@ngx-gallery/core';
   styleUrls: ['./gallery-hotsite.component.scss']
 })
 export class GalleryHotsiteComponent implements OnInit {
+  @ViewChild('galleryModal') galleryModal: ElementRef;
+  
   galleryId = 'first';
   galleryConfig: GalleryConfig = {
     imageSize: "cover",
@@ -31,4 +33,16 @@ export class GalleryHotsiteComponent implements OnInit {
     galleryRef.play();
   }
 
+  openModal() {
+    this.galleryModal.nativeElement.classList.add('is-active');
+    this.galleryModal.nativeElement.addEventListener('click', (e) => {
+      if(e.target.className === 'modal-background'){
+        this.galleryModal.nativeElement.classList.remove('is-active');
+      }
+    });
+  }
+
+  closeModal(){
+    this.galleryModal.nativeElement.classList.remove('is-active');
+  }
 }
