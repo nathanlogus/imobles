@@ -4,23 +4,20 @@
       <gallery id="first"></gallery>
     </div>
     <div class="column content is-medium">
-      <h1 class="title">Uma oportunidade incomparável</h1>
-      <p>
-        Você já sabe que os lançamentos Terra Mundi tem um padrão muito acima do mercado. Mas você sabe por que o
-        Eldorado é a melhor versão de todas?
-      </p>
+      <h1 class="title">Por que o Terra Mundi é o melhor?</h1>
       <ol type="1">
-        <li>Porque ele é um condomínio <strong>CLUBE</strong>. Lazer e diversão sem sair de casa!</li>
-        <li>Porque só quem entende de <strong>SUSTENTABILIDADE</strong> de verdade consegue oferecer conforto com
-          <strong>TAXA DE CONDOMÍNIO REDUZIDA!</strong></li>
+        <li>Porque é o <strong>ÚLTIMO</strong> empreendimento do Bairro Eldorado. <strong>VALORIZAÇÃO ACIMA DA
+            MÉDIA</strong> para seu investimento!</li>
+        <li>Por que a eficiência de água e energia garantem <strong>SUSTENTABILIDADE</strong> com <strong>TAXA DE
+            CONDOMÍNIO REDUZIDA!</strong></li>
+        <li>Porque é um condomínio <strong>CLUBE</strong>. Natureza e lazer sem sair de casa!</li>
         <li>Porque todos os apartamentos são entregues com <strong>AR CONDICIONADO</strong>!</li>
-        <li>Porque é o <strong>ÚLTIMO</strong> empreendimento a ser lançado no incrível Bairro Eldorado. Isso significa
-          <strong>VALORIZAÇÃO ACIMA DA MÉDIA</strong> para seu investimento!
-        </li>
-        <li>Porque a entrada é <strong>FACILITADA</strong> e os planos de pagamento são personalizados!</li>
-        <li>Porque se você comprar agora poderá escolher as <strong>MELHORES UNIDADES!</strong></li>
+        <li>Porque a entrada é <strong>FACILITADA</strong> com planos de pagamento personalizados!</li>
+        <li>Porque se você comprar agora poderá escolher as <strong>MELHORES UNIDADES</strong>!</li>
       </ol>
-      <a class="chat button is-large" (click)="openModal()">Simule seu <br>plano de Pagamento<i
+
+
+      <a class="chat button is-large" (click)="openModal()">Receba mais detalhes<i
           class="la la-caret-right"></i></a>
     </div>
   </div>
@@ -30,40 +27,79 @@
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Te ligamos agora mesmo!</p>
+      <p class="modal-card-title">Receba mais detalhes</p>
       <button class="delete" aria-label="close" (click)="closeModal()"></button>
     </header>
     <section class="modal-card-body">
-      <!-- Content ... -->
-      <div class="field">
-        <div class="control has-icons-left">
-          <input class="input" type="text" placeholder="Seu nome" [(ngModel)]="cta.name">
-          <span class="icon is-small is-left">
-            <i class="la la-user"></i>
-          </span>
-        </div>
-      </div>
-
-      <div class="field">
-        <div class="control has-icons-left">
-          <input class="input" type="text" placeholder="Seu telefone" [(ngModel)]="cta.telephone">
-          <span class="icon is-small is-left">
-            <i class="la la-phone-square"></i>
-          </span>
-        </div>
-      </div>
 
 
-      <div class="field">
-        <div class="control has-icons-left">
-          <input class="input" type="text" placeholder="Seu e-mail" [(ngModel)]="cta.email">
-          <span class="icon is-small is-left">
-            <i class="la la-phone-square"></i>
-          </span>
-        </div>
-      </div>
-
-      <a class="button is-info is-medium is-fullwidth is-uppercase" (click)="sendData()">Me ligue grátis</a>
+      <iframe id="JotFormIFrame-91594632902663" title="Teste de cta" onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera"
+        src="https://form.jotformz.com/91594632902663" frameborder="0" style="width: 1px;
+        min-width: 100%;
+        height:439px;
+        border:none;" scrolling="no">
+      </iframe>
+      <script type="text/javascript">
+        var ifr = document.getElementById("JotFormIFrame-91594632902663");
+        if (window.location.href && window.location.href.indexOf("?") > -1) {
+          var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
+          if (ifr && get.length > 0) {
+            var src = ifr.src;
+            src = src.indexOf("?") > -1 ? src + "&" + get : src + "?" + get;
+            ifr.src = src;
+          }
+        }
+        window.handleIFrameMessage = function (e) {
+          if (typeof e.data === 'object') { return; }
+          var args = e.data.split(":");
+          if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+          if (!iframe) { return; }
+          switch (args[0]) {
+            case "scrollIntoView":
+              iframe.scrollIntoView();
+              break;
+            case "setHeight":
+              iframe.style.height = args[1] + "px";
+              break;
+            case "collapseErrorPage":
+              if (iframe.clientHeight > window.innerHeight) {
+                iframe.style.height = window.innerHeight + "px";
+              }
+              break;
+            case "reloadPage":
+              window.location.reload();
+              break;
+            case "loadScript":
+              var src = args[1];
+              if (args.length > 3) {
+                src = args[1] + ':' + args[2];
+              }
+              var script = document.createElement('script');
+              script.src = src;
+              script.type = 'text/javascript';
+              document.body.appendChild(script);
+              break;
+            case "exitFullscreen":
+              if (window.document.exitFullscreen) window.document.exitFullscreen();
+              else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+              else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+              else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+              else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+              break;
+          }
+          var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+          if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+            var urls = { "docurl": encodeURIComponent(document.URL), "referrer": encodeURIComponent(document.referrer) };
+            iframe.contentWindow.postMessage(JSON.stringify({ "type": "urls", "value": urls }), "*");
+          }
+        };
+        if (window.addEventListener) {
+          window.addEventListener("message", handleIFrameMessage, false);
+        } else if (window.attachEvent) {
+          window.attachEvent("onmessage", handleIFrameMessage);
+        }
+      </script>
     </section>
   </div>
 </div>

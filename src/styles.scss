@@ -10,6 +10,7 @@ $info: #f4bd2d;
 $link: #1c7de1;
 $success: #4bacc6;
 $warning: #f07624;
+$warning-invert: white;
 
 $size-1: 2rem;
 $size-2: 1.6rem;
@@ -46,4 +47,8 @@ gallery {
 gallery-dots {
   border-radius: 30px;
   background-color: rgba(0,0,0,0.4);
+}
+
+.modal {
+  z-index: 100;
 }

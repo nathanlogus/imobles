@@ -21,6 +21,7 @@ import { ContactHotsiteComponent } from '../core/hotsite/contact-hotsite/contact
 import { FooterHotsiteComponent } from '../core/hotsite/footer-hotsite/footer-hotsite.component';
 import { NavigationHotsiteComponent } from '../core/hotsite/navigation-hotsite/navigation-hotsite.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { AwardHotsiteComponent } from '../core/hotsite/award-hotsite/award-hotsite.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     ContactHotsiteComponent,
     FooterHotsiteComponent,
     NavigationHotsiteComponent,
+    AwardHotsiteComponent,
   ],
   imports: [
     CommonModule,

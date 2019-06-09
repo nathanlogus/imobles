@@ -1,0 +1,158 @@
+.separator {
+    background: #2cd48f;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.curtain {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.curtain__wrapper {
+    width: 100%;
+    height: 100%;
+}
+    
+.curtain__panel {
+    width: 30%;
+    height: 250px;
+    position: relative;
+    z-index: 2;
+    transition: all .5s ease-out;
+}
+
+.curtain:hover .curtain__panel{
+    width: 35%;
+}
+
+@media screen and (max-width: 768px) {
+    .curtain__panel {
+        width: 50%;
+    }
+
+    .curtain:hover .curtain__panel{
+        width: 50%;
+    }
+}
+
+.curtain__panel--left {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curtain__panel--left.white:before {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    right:-50px;
+}
+
+.curtain__panel--left.red:before {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent transparent #d1301b;
+    position: absolute;
+    right:-50px;
+}
+
+.curtain__panel--left.blue:before {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent transparent #1e9cfc;
+    position: absolute;
+    right:-50px;
+}
+
+.curtain__panel--left.orange:before {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent transparent #f88842;
+    position: absolute;
+    right:-50px;
+}
+
+.curtain__panel--right.white:after {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    left:-50px;
+}
+
+.curtain__panel--right.red:after {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent #d1301b transparent;
+    position: absolute;
+    left:-50px;
+}
+
+.curtain__panel--right.blue:after {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent #1e9cfc transparent;
+    position: absolute;
+    left:-50px;
+}
+
+.curtain__panel--right.orange:after {
+    content:"";
+    border-style: solid;
+    border-width: 0px 0px 250px 50px;
+    border-color: transparent transparent #f88842 transparent;
+    position: absolute;
+    left:-50px;
+}
+
+.curtain__panel--right {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curtain__prize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #333;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.image {
+    background-size: cover;
+    background-position-y: 80%;
+}
+
+.white {
+    background-color: white;
+}
+
+.red {
+    background-color: #d1301b;
+}
+
+.orange {
+    background-color: #f88842;
+}
+
+.blue {
+    background-color: #1e9cfc;
+}

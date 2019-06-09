@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { GalleryConfig, Gallery, GalleryRef, ImageItem } from '@ngx-gallery/core';
 
 @Component({
@@ -7,7 +7,7 @@ import { GalleryConfig, Gallery, GalleryRef, ImageItem } from '@ngx-gallery/core
   styleUrls: ['./plants-hotsite.component.scss']
 })
 export class PlantsHotsiteComponent implements OnInit {
-
+  @ViewChild('plantsModal') galleryModal: ElementRef;
   area: string = "64m²";
   rooms: string = "1 Suíte";
   garage: string = "1";
@@ -99,5 +99,19 @@ export class PlantsHotsiteComponent implements OnInit {
       }
     });
   }
+
+  openModal() {
+    this.galleryModal.nativeElement.classList.add('is-active');
+    this.galleryModal.nativeElement.addEventListener('click', (e) => {
+      if(e.target.className === 'modal-background'){
+        this.galleryModal.nativeElement.classList.remove('is-active');
+      }
+    });
+  }
+
+  closeModal(){
+    this.galleryModal.nativeElement.classList.remove('is-active');
+  }
+
 
 }
