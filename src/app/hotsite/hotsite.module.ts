@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryModule } from  '@ngx-gallery/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { HotsiteComponent } from './hotsite.component';
 import { HeroHotsiteComponent } from '../core/hotsite/hero-hotsite/hero-hotsite.component';
@@ -18,6 +19,8 @@ import { OthersHotsiteComponent } from '../core/hotsite/others-hotsite/others-ho
 import { TestimonialsHotsiteComponent } from '../core/hotsite/testimonials-hotsite/testimonials-hotsite.component';
 import { ContactHotsiteComponent } from '../core/hotsite/contact-hotsite/contact-hotsite.component';
 import { FooterHotsiteComponent } from '../core/hotsite/footer-hotsite/footer-hotsite.component';
+import { NavigationHotsiteComponent } from '../core/hotsite/navigation-hotsite/navigation-hotsite.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,16 @@ import { FooterHotsiteComponent } from '../core/hotsite/footer-hotsite/footer-ho
     TestimonialsHotsiteComponent,
     ContactHotsiteComponent,
     FooterHotsiteComponent,
+    NavigationHotsiteComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     GalleryModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ScrollToModule.forRoot()
   ]
 })
 export class HotsiteModule { }

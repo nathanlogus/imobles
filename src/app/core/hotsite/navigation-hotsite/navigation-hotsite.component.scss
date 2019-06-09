@@ -1,0 +1,47 @@
+.navbar {
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+    transition: background-color .5s ease 0s;
+}
+
+a.navbar-item {
+    padding: 1em;
+    color: white;
+}
+
+.brand {
+    padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+
+    .brand {
+        padding: .2em;
+    }
+
+    .navbar {
+        background-color: white;
+        border: none;
+        z-index: 100;
+        transition: background-color .5s ease 0s;
+    }
+    
+    a.navbar-item {
+        padding: 1em;
+        color: black;
+    }
+    
+}
+
+.scroll {
+    background-color: white;
+    -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+    -moz-transition: background .5s ease-in-out, opacity .5s ease;
+    transition: background .5s ease-in-out, opacity .5s ease;
+}
+
+.black {
+    -webkit-filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+    filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+}

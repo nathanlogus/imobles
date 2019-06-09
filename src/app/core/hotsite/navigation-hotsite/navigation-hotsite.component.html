@@ -1,0 +1,42 @@
+<nav id="navbar" class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <img id="brand" class="brand" src="assets/img/terramundi/logo.png">
+    <a role="button" #navBurger (click)="toggleNavbar()" class="navbar-burger burger" aria-label="menu"
+      aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div #navMenu class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item is-uppercase">
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#gallery'">
+          Oportunidade
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#advantages'">
+          Sustentabilidade
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#commons'">
+          Lazer
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#decorated'">
+          Espaço Interno
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#plants'">
+          Plantas
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#localization'">
+          Localização
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#concept'">
+          Conceito
+        </a>
+        <a ngx-scroll-to class="navbar-item" [ngx-scroll-to]="'#contact'">
+          Contato
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

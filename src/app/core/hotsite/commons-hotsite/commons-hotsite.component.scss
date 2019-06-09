@@ -2,6 +2,10 @@ gallery {
     height: 600px;
 }
 
+.container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
 @media screen and (max-width: 768px) {
     gallery {

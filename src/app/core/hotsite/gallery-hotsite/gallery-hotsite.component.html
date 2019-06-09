@@ -1,4 +1,4 @@
-<section class="section">
+<section id="gallery" class="section">
   <div class="columns">
     <div class="column">
       <gallery id="first"></gallery>
@@ -20,7 +20,8 @@
         <li>Porque a entrada é <strong>FACILITADA</strong> e os planos de pagamento são personalizados!</li>
         <li>Porque se você comprar agora poderá escolher as <strong>MELHORES UNIDADES!</strong></li>
       </ol>
-      <a class="chat button is-large" (click)="openModal()">Simule seu <br>plano de Pagamento<i class="la la-caret-right"></i></a>
+      <a class="chat button is-large" (click)="openModal()">Simule seu <br>plano de Pagamento<i
+          class="la la-caret-right"></i></a>
     </div>
   </div>
 </section>
@@ -36,7 +37,7 @@
       <!-- Content ... -->
       <div class="field">
         <div class="control has-icons-left">
-          <input class="input" type="text" placeholder="Seu nome">
+          <input class="input" type="text" placeholder="Seu nome" [(ngModel)]="cta.name">
           <span class="icon is-small is-left">
             <i class="la la-user"></i>
           </span>
@@ -45,14 +46,24 @@
 
       <div class="field">
         <div class="control has-icons-left">
-          <input class="input" type="text" placeholder="Seu telefone">
+          <input class="input" type="text" placeholder="Seu telefone" [(ngModel)]="cta.telephone">
           <span class="icon is-small is-left">
             <i class="la la-phone-square"></i>
           </span>
         </div>
       </div>
 
-    <a class="button is-primary is-medium is-fullwidth is-uppercase">Me ligue grátis</a>
+
+      <div class="field">
+        <div class="control has-icons-left">
+          <input class="input" type="text" placeholder="Seu e-mail" [(ngModel)]="cta.email">
+          <span class="icon is-small is-left">
+            <i class="la la-phone-square"></i>
+          </span>
+        </div>
+      </div>
+
+      <a class="button is-info is-medium is-fullwidth is-uppercase" (click)="sendData()">Me ligue grátis</a>
     </section>
   </div>
 </div>

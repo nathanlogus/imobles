@@ -1,14 +1,17 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { GalleryRef, Gallery, GalleryConfig } from '@ngx-gallery/core';
+import { HotsiteService } from '../../../hotsite/hotsite.service';
+import { Cta } from '../../../hotsite/cta.model';
 
 @Component({
   selector: 'app-gallery-hotsite',
   templateUrl: './gallery-hotsite.component.html',
-  styleUrls: ['./gallery-hotsite.component.scss']
+  styleUrls: ['./gallery-hotsite.component.scss'],
+  providers: [HotsiteService]
 })
 export class GalleryHotsiteComponent implements OnInit {
   @ViewChild('galleryModal') galleryModal: ElementRef;
-  
+  cta: Cta = new Cta();
   galleryId = 'first';
   galleryConfig: GalleryConfig = {
     imageSize: "cover",
@@ -17,7 +20,7 @@ export class GalleryHotsiteComponent implements OnInit {
     dots: true
   }
 
-  constructor(private gallery: Gallery) { }
+  constructor(private gallery: Gallery, private hotsiteService: HotsiteService) { }
 
   ngAfterViewInit() {
     this.gallery.ref('first').setConfig(this.galleryConfig);
@@ -44,5 +47,13 @@ export class GalleryHotsiteComponent implements OnInit {
 
   closeModal(){
     this.galleryModal.nativeElement.classList.remove('is-active');
+  }
+
+  sendData(){
+    this.cta.time_stamp = new Date();
+    this.cta.scheduled = new Date();
+    this.hotsiteService.create(this.cta).subscribe(response => {
+      console.log(response);
+    });
   }
 }

@@ -57,6 +57,9 @@ MIT
 @angular/core
 MIT
 
+@angular/forms
+MIT
+
 @angular/platform-browser
 MIT
 
@@ -67,6 +70,9 @@ MIT
 MIT
 
 @ngx-gallery/lightbox
+MIT
+
+@nicky-lenaers/ngx-scroll-to
 MIT
 
 animate.css
