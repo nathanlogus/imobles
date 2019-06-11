@@ -1,0 +1,28 @@
+.footer {
+    background: none;
+    background-image: url("/assets/img/footer.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 200px;
+}
+
+.container{
+    padding: 1em;
+}
+
+.icon {
+    color: #f17221;
+    font-size: 32px;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.separator {
+    background: #f17221;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 150px;
+}

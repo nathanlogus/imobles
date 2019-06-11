@@ -5,9 +5,12 @@ import { NavigationComponent } from '../core/imobles/navigation/navigation.compo
 import { HeroComponent } from '../core/imobles/hero/hero.component';
 import { AboutComponent } from '../core/imobles/about/about.component';
 import { FooterComponent } from '../core/imobles/footer/footer.component';
-import { ExperienceComponent } from '../core/imobles/experience/experience.component';
 import { InvestorsComponent } from '../core/imobles/investors/investors.component';
 import { ImobleComponent } from './imoble.component';
+import { WhoComponent } from '../core/imobles/who/who.component';
+import { ContactComponent } from '../core/imobles/contact/contact.component';
+import { CasesComponent } from '../core/imobles/cases/cases.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ImobleComponent } from './imoble.component';
     HeroComponent,
     AboutComponent,
     FooterComponent,
-    ExperienceComponent,
-    InvestorsComponent
+    InvestorsComponent,
+    WhoComponent,
+    ContactComponent,
+    CasesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class ImobleModule { }

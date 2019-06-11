@@ -3,12 +3,7 @@ import { Title, Meta } from '@angular/platform-browser';
 @Component({
     selector: 'imoble',
     styleUrls: ['imoble.component.scss'],
-    template: `
-        <app-hero></app-hero>
-        <app-investors></app-investors>
-        <app-about></app-about>
-        <app-footer></app-footer>    
-  `,
+    templateUrl: 'imoble.component.html'
 })
 export class ImobleComponent {
 

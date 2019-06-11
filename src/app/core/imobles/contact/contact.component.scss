@@ -1,0 +1,46 @@
+.section {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.separator {
+    background: #f17221;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    font-size: 32px;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.column {
+    padding: 1em;
+    min-height: 64px;
+    color: white;
+    background-color: #f17221;
+    border-color: #d46a28;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.column:first-child{
+    border-radius: 15px 0 0 15px;
+}
+
+.column:last-child{
+    border-radius: 0 15px 15px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .column:first-child{
+        border-radius: 15px 15px 0 0;
+    }
+
+    .column:last-child{
+        border-radius: 0 0 15px 15px ;
+    }
+}
