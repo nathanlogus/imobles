@@ -28,11 +28,9 @@ export class GalleryHotsiteComponent implements OnInit {
 
   ngOnInit() {
     const galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
-    galleryRef.addImage({ src: 'assets/img/terramundi/espelho.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/praca-flores.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/playground.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/fachada-dia.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/passaro.jpg' });
     galleryRef.addImage({ src: 'assets/img/terramundi/fachada-noite.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/piscina-adulto.jpg' });
     galleryRef.play();
   }
 

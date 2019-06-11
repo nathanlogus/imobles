@@ -41,7 +41,8 @@ a.navbar-item {
     transition: background .5s ease-in-out, opacity .5s ease;
 }
 
-.black {
-    -webkit-filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
-    filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+.white {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+
 }

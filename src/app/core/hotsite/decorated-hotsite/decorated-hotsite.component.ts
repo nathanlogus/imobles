@@ -25,11 +25,12 @@ export class DecoratedHotsiteComponent implements OnInit {
 
   ngOnInit() {
     const galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
-    galleryRef.addImage({ src: 'assets/img/terramundi/interior1.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/interior2.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/interior3.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/interior4.jpg' });
-    galleryRef.addImage({ src: 'assets/img/terramundi/interior5.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/internas/interna1.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/internas/interna2.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/internas/interna3.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/internas/interna4.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/internas/interna5.jpg' });
+    galleryRef.addImage({ src: 'assets/img/terramundi/internas/interna6.jpg' });
     galleryRef.play();
   }
 

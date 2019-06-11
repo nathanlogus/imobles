@@ -26,7 +26,7 @@ export class NavigationHotsiteComponent implements OnInit {
       let element = document.getElementById('navbar');
       let logo = document.getElementById('brand');
       element.classList.add('scroll');
-      logo.classList.add('black');
+      logo.classList.remove('white');
 
       let elements = document.getElementsByClassName('navbar-item');
       for (let index = 0; index < elements.length; index++) {
@@ -38,7 +38,7 @@ export class NavigationHotsiteComponent implements OnInit {
       let element = document.getElementById('navbar');
       let logo = document.getElementById('brand');
       if(window.innerWidth > 768){
-        logo.classList.remove('black');
+        logo.classList.add('white');
       }
       element.classList.remove('scroll');
     
