@@ -4,7 +4,7 @@ threadsafe: true
 
 handlers:
 - url: /(.*\.(gif|png|jpg|css|js|svg|woff|ttf|woff2)(|\.map))$
-  static_files: dist/\1
+  static_files: dist/browser/\1
   upload: dist/browser/(.*)(|\.map)
   expiration: "15m"
   http_headers:
