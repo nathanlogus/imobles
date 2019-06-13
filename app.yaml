@@ -1,12 +1,186 @@
-runtime: python27
+application: imobles.com
+version: 1
+runtime: python
 api_version: 1
-threadsafe: true
+
+default_expiration: "30d"
 
 handlers:
-- url: /(.*\.(gif|png|jpg|css|js|svg|woff|ttf|woff2)(|\.map))$
+- url: /(.*\.(appcache|manifest))
+  mime_type: text/cache-manifest
   static_files: dist/browser/\1
-  upload: dist/(.*)(|\.map)
+  upload: dist/browser/(.*\.(appcache|manifest))
+  expiration: "0m"
 
-- url: /(.*)
+- url: /(.*\.atom)
+  mime_type: application/atom+xml
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.atom)
+  expiration: "1h"
+
+- url: /(.*\.crx)
+  mime_type: application/x-chrome-extension
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.crx)
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.css)
+
+- url: /(.*\.eot)
+  mime_type: application/vnd.ms-fontobject
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.eot)
+
+- url: /(.*\.htc)
+  mime_type: text/x-component
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.htc)
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.html)
+  expiration: "1h"
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.ico)
+  expiration: "7d"
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.js)
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.json)
+  expiration: "1h"
+
+- url: /(.*\.m4v)
+  mime_type: video/m4v
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.m4v)
+
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.mp4)
+
+- url: /(.*\.(ogg|oga))
+  mime_type: audio/ogg
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.(ogg|oga))
+
+- url: /(.*\.ogv)
+  mime_type: video/ogg
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.ogv)
+
+- url: /(.*\.otf)
+  mime_type: font/opentype
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.otf)
+
+- url: /(.*\.rss)
+  mime_type: application/rss+xml
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.rss)
+  expiration: "1h"
+
+- url: /(.*\.safariextz)
+  mime_type: application/octet-stream
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.safariextz)
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.(svg|svgz))
+
+- url: /(.*\.swf)
+  mime_type: application/x-shockwave-flash
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.swf)
+
+- url: /(.*\.ttf)
+  mime_type: font/truetype
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.ttf)
+
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.txt)
+
+- url: /(.*\.unity3d)
+  mime_type: application/vnd.unity
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.unity3d)
+
+- url: /(.*\.webm)
+  mime_type: video/webm
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.webm)
+
+- url: /(.*\.webp)
+  mime_type: image/webp
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.webp)
+
+- url: /(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.woff)
+
+- url: /(.*\.xml)
+  mime_type: application/xml
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.xml)
+  expiration: "1h"
+
+- url: /(.*\.xpi)
+  mime_type: application/x-xpinstall
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.xpi)
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+# audio files
+- url: /(.*\.(mid|midi|mp3|wav))
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.(mid|midi|mp3|wav))  
+
+# windows files
+- url: /(.*\.(doc|exe|ppt|rtf|xls))
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.(doc|exe|ppt|rtf|xls))
+
+# compressed files
+- url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.(bz2|gz|rar|tar|tgz|zip))
+
+# index files
+- url: /(.+)/
+  static_files: dist/browser/\1/index.html
+  upload: dist/browser/(.+)/index.html
+  expiration: "15m"
+
+- url: /(.+)
+  static_files: dist/browser/\1/index.html
+  upload: dist/browser/(.+)/index.html
+  expiration: "15m"
+
+# site root
+- url: /
   static_files: dist/browser/index.html
   upload: dist/browser/index.html
+  expiration: "15m"
