@@ -2,7 +2,6 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
-
 default_expiration: "30d"
 
 handlers:
@@ -182,5 +181,9 @@ handlers:
 # site root
 - url: /
   static_files: distindex.html
-  upload: distindex.html
+  upload: dist/index.html
   expiration: "15m"
+
+- url: /(.*)
+  static_files: dist/index.html
+  upload: dist/index.html
