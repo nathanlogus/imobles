@@ -4,15 +4,7 @@ threadsafe: true
 
 handlers:
 # Routing for bundles to serve directly
-- url: /((?:inline|main|polyfills|styles|vendor)\.[a-z0-9]+\.bundle\.js)
-  secure: always
-  redirect_http_response_code: 301
-  static_files: dist/\1
-  upload: dist/.*
-  expiration: "15m"
-
-# Routing for a prod styles.bundle.css to serve directly
-- url: /(styles\.[a-z0-9]+\.bundle\.css)
+- url: /(.*\.(gif|png|jpg|css|js|svg|woff|ttf|woff2)(|\.map))$
   secure: always
   redirect_http_response_code: 301
   static_files: dist/\1
