@@ -52,5 +52,7 @@ gallery-dots {
 }
 
 .modal-content {
+  overflow: hidden;
+  max-height: 100vh;
   margin: 0 auto;
 }
