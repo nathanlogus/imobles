@@ -3,26 +3,19 @@ api_version: 1
 threadsafe: true
 
 handlers:
-# Routing for bundles to serve directly
 - url: /(.*\.(gif|png|jpg|css|js|svg|woff|ttf|woff2)(|\.map))$
   secure: always
-  redirect_http_response_code: 301
+  redirect_http_code: 301
   static_files: dist/\1
   upload: dist/(.*)(|\.map)
   expiration: "15m"
+  http_headers:
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: DENY
 
-# Routing for typedoc, assets and favicon.ico to serve directly
-- url: /((?:assets|docs)/.*|favicon\.ico)
+- url: /(.*)
   secure: always
-  redirect_http_response_code: 301
-  static_files: dist/\1
-  upload: dist/(.*)(|\.map)
-  expiration: "15m"
-
-# Any other requests are routed to index.html for angular to handle so we don't need hash URLs
-- url: /.*
-  secure: always
-  redirect_http_response_code: 301
+  redirect_http_code: 301
   static_files: dist/index.html
   upload: dist/index.html
   expiration: "15m"
