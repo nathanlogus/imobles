@@ -8,7 +8,7 @@ handlers:
   secure: always
   redirect_http_response_code: 301
   static_files: dist/\1
-  upload: dist/.*
+  upload: dist/(.*)(|\.map)
   expiration: "15m"
 
 # Routing for typedoc, assets and favicon.ico to serve directly
@@ -16,7 +16,7 @@ handlers:
   secure: always
   redirect_http_response_code: 301
   static_files: dist/\1
-  upload: dist/.*
+  upload: dist/(.*)(|\.map)
   expiration: "15m"
 
 # Any other requests are routed to index.html for angular to handle so we don't need hash URLs
@@ -24,7 +24,7 @@ handlers:
   secure: always
   redirect_http_response_code: 301
   static_files: dist/index.html
-  upload: dist/index\.html
+  upload: dist/index.html
   expiration: "15m"
   http_headers:
     Strict-Transport-Security: max-age=31536000; includeSubDomains
