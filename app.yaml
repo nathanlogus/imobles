@@ -6,7 +6,15 @@ handlers:
 - url: /(.*\.(gif|png|jpg|css|js|svg|woff|ttf|woff2)(|\.map))$
   static_files: dist/\1
   upload: dist/(.*)(|\.map)
+  expiration: "15m"
+  http_headers:
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: DENY
 
 - url: /(.*)
   static_files: dist/index.html
   upload: dist/index.html
+  expiration: "15m"
+  http_headers:
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: DENY
