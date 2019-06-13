@@ -7,17 +7,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { ImobleModule } from './imoble/imoble.module';
 import { GalleryModule } from '@ngx-gallery/core';
 import { HotsiteModule } from './hotsite/hotsite.module';
-import { LightboxModule } from  '@ngx-gallery/lightbox';
+import { CommonModule } from '@angular/common';
+import { TransferHttpCacheModule } from '@nguniversal/common';
+import { HttpClientModule } from '@angular/common/http';
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     ImobleModule,
     HotsiteModule,
     AppRoutingModule,
     GalleryModule,
-    LightboxModule
+    CommonModule,
+    TransferHttpCacheModule,
+    HttpClientModule,
+    NgtUniversalModule,
+    ScrollToModule
   ],
   declarations: [AppComponent],
   providers: [],

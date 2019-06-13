@@ -9,8 +9,10 @@ import { GalleryRef, Gallery, GalleryConfig } from '@ngx-gallery/core';
 export class LocalizationHotsiteComponent implements OnInit {
   galleryId = 'localization';
   galleryConfig: GalleryConfig = {
-    imageSize: "contain",
-    loadingStrategy: 'preload',
+    loadingIcon: "Loading...",
+    imageSize: "cover",
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
     thumb: false,
     dots: true
   }

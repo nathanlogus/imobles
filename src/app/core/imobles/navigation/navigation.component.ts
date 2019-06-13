@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { WINDOW } from '@ng-toolkit/universal';
 
 @Component({
   selector: 'app-navigation',
@@ -10,14 +11,14 @@ export class NavigationComponent implements OnInit {
   @ViewChild('navBurger') navBurger: ElementRef;
   @ViewChild('navMenu') navMenu: ElementRef;
 
-  constructor(@Inject(DOCUMENT) document) { }
+  constructor(@Inject(WINDOW) private window: Window, @Inject(DOCUMENT) document) { }
 
   ngOnInit() {
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
-    if (window.pageYOffset > 50) {
+    if (this.window.pageYOffset > 50) {
       let element = document.getElementById('navbar');
       element.classList.add('scroll');
       this.navBurger.nativeElement.classList.remove('has-text-white');

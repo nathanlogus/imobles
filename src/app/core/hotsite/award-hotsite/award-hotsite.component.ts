@@ -7,19 +7,21 @@ import { GalleryRef, Gallery, GalleryConfig } from '@ngx-gallery/core';
   styleUrls: ['./award-hotsite.component.scss']
 })
 export class AwardHotsiteComponent implements OnInit {
-  galleryId = 'award';
+  galleryId = 'awards';
   galleryConfig: GalleryConfig = {
+    loadingIcon: "Loading...",
     imageSize: "cover",
-    loadingStrategy: 'preload',
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
+    counter: false,
     thumb: false,
-    dots: false,
-    counter: false
-  }  
+    dots: false
+  }
 
   constructor(private gallery: Gallery) { }
 
   ngAfterViewInit() {
-    this.gallery.ref('award').setConfig(this.galleryConfig);
+    this.gallery.ref('awards').setConfig(this.galleryConfig);
   }
 
   ngOnInit() {

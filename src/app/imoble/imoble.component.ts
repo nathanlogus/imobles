@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { WINDOW } from '@ng-toolkit/universal';
 @Component({
     selector: 'imoble',
     styleUrls: ['imoble.component.scss'],
@@ -7,22 +8,8 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ImobleComponent {
 
-  constructor(private titleService: Title, private metaSerice: Meta){
+  constructor(@Inject(WINDOW) private window: Window, private titleService: Title, private metaSerice: Meta){
     this.titleService.setTitle('imobles | Escalamos seu empreendimento!');
     this.metaSerice.updateTag({name: 'description', content: 'Empreedimentos imobiliários e Marketing Digital'});
-  }
-
-  ngAfterViewInit() {
-    this.scrollToTop();
- }
-
-  scrollToTop() {
-    (function smoothscroll() {
-      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(smoothscroll);
-        window.scrollTo(0, currentScroll - (currentScroll / 8));
-      }
-    })();
   }
 }

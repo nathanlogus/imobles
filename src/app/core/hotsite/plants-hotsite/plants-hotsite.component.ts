@@ -15,13 +15,13 @@ export class PlantsHotsiteComponent implements OnInit {
   galleryId = 'plants';
   galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
   galleryConfig: GalleryConfig = {
-    imageSize: "contain",
-    nav: false,
-    loadingStrategy: 'preload',
+    loadingIcon: "Loading...",
+    imageSize: "cover",
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
     thumb: false,
     dots: true
   }
-
 
   constructor(private gallery: Gallery) { }
 

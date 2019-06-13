@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryModule } from  '@ngx-gallery/core';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 import { HotsiteComponent } from './hotsite.component';
 import { HeroHotsiteComponent } from '../core/hotsite/hero-hotsite/hero-hotsite.component';
 import { GalleryHotsiteComponent } from '../core/hotsite/gallery-hotsite/gallery-hotsite.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { AdvantagesHotsiteComponent } from '../core/hotsite/advantages-hotsite/advantages-hotsite.component';
 import { CommonsHotsiteComponent } from '../core/hotsite/commons-hotsite/commons-hotsite.component';
 import { DecoratedHotsiteComponent } from '../core/hotsite/decorated-hotsite/decorated-hotsite.component';
@@ -43,11 +39,7 @@ import { AwardHotsiteComponent } from '../core/hotsite/award-hotsite/award-hotsi
   ],
   imports: [
     CommonModule,
-    BrowserModule,
     GalleryModule,
-    HttpClientModule,
-    RouterModule,
-    FormsModule,
     ScrollToModule.forRoot()
   ]
 })

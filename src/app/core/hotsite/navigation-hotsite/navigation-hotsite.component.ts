@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener, Inject  } from '@angular/core';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { element } from '@angular/core/src/render3';
+import { WINDOW } from '@ng-toolkit/universal';
 
 @Component({
   selector: 'app-navigation-hotsite',
@@ -11,10 +12,10 @@ export class NavigationHotsiteComponent implements OnInit {
   @ViewChild('navBurger') navBurger: ElementRef;
   @ViewChild('navMenu') navMenu: ElementRef;
 
-  constructor(@Inject(DOCUMENT) document, private vps: ViewportScroller) { }
+  constructor(@Inject(WINDOW) private window: Window, @Inject(DOCUMENT) document, private vps: ViewportScroller) { }
 
   ngOnInit() {
-    if(window.innerWidth < 768){
+    if(this.window.innerWidth < 768){
       let logo = document.getElementById('brand');
       logo.classList.add('black');
     }
@@ -22,7 +23,7 @@ export class NavigationHotsiteComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
-    if (window.pageYOffset > 50) {
+    if (this.window.pageYOffset > 50) {
       let element = document.getElementById('navbar');
       let logo = document.getElementById('brand');
       element.classList.add('scroll');
@@ -37,7 +38,7 @@ export class NavigationHotsiteComponent implements OnInit {
     } else {
       let element = document.getElementById('navbar');
       let logo = document.getElementById('brand');
-      if(window.innerWidth > 768){
+      if(this.window.innerWidth > 768){
         logo.classList.add('white');
       }
       element.classList.remove('scroll');

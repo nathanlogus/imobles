@@ -9,12 +9,13 @@ import { GalleryRef, Gallery, GalleryConfig } from '@ngx-gallery/core';
 export class ConceptHotsiteComponent implements OnInit {
   galleryId = 'concept';
   galleryConfig: GalleryConfig = {
+    loadingIcon: "Loading...",
     imageSize: "cover",
-    loadingStrategy: 'preload',
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
     thumb: false,
-    dots: false,
-    counter: false
-  }  
+    dots: true
+  }
 
   constructor(private gallery: Gallery) { }
 

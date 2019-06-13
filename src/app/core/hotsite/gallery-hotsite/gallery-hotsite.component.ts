@@ -10,12 +10,14 @@ export class GalleryHotsiteComponent implements OnInit {
   @ViewChild('galleryModal') galleryModal: ElementRef;
   galleryId = 'first';
   galleryConfig: GalleryConfig = {
+    loadingIcon: "Loading...",
     imageSize: "cover",
-    loadingStrategy: 'preload',
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
     thumb: false,
     dots: true
   }
-
+  
   constructor(private gallery: Gallery) { }
 
   ngAfterViewInit() {

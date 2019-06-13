@@ -10,12 +10,13 @@ export class DecoratedHotsiteComponent implements OnInit {
   @ViewChild('decoratedModal') decoratedModal: ElementRef;
   galleryId = 'decorated';
   galleryConfig: GalleryConfig = {
+    loadingIcon: "Loading...",
     imageSize: "cover",
-    loadingStrategy: 'preload',
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
     thumb: false,
     dots: true
   }
-
   constructor(private gallery: Gallery) { }
 
   ngAfterViewInit() {

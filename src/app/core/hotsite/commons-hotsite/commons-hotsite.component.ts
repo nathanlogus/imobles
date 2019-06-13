@@ -9,8 +9,10 @@ import { GalleryConfig, Gallery, GalleryRef } from '@ngx-gallery/core';
 export class CommonsHotsiteComponent implements OnInit {
   galleryId='commons';
   galleryConfig: GalleryConfig = {
+    loadingIcon: "Loading...",
     imageSize: "cover",
-    loadingStrategy:'preload',
+    loadingMode: "determinate",
+    loadingStrategy: "preload",
     thumb: false,
     dots: true
   }
