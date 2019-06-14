@@ -20,22 +20,22 @@ export class NavigationComponent implements OnInit {
   onWindowScroll(e) {
     if (this.window.pageYOffset > 50) {
       let element = document.getElementById('navbar');
+      let logo = document.getElementById('brand');
       element.classList.add('scroll');
-      this.navBurger.nativeElement.classList.remove('has-text-white');
 
       let elements = document.getElementsByClassName('navbar-item');
       for (let index = 0; index < elements.length; index++) {
         const element = elements[index];
-        element.classList.add('has-text-black')
+        element.classList.add('has-text-black');
       }
 
     } else {
       let element = document.getElementById('navbar');
+      let logo = document.getElementById('brand');
       element.classList.remove('scroll');
     
       let elements = document.getElementsByClassName('navbar-item');
 
-      this.navBurger.nativeElement.classList.add('has-text-white');
       for (let index = 0; index < elements.length; index++) {
         const element = elements[index];
         element.classList.remove('has-text-black')

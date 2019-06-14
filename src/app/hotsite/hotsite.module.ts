@@ -18,6 +18,7 @@ import { FooterHotsiteComponent } from '../core/hotsite/footer-hotsite/footer-ho
 import { NavigationHotsiteComponent } from '../core/hotsite/navigation-hotsite/navigation-hotsite.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AwardHotsiteComponent } from '../core/hotsite/award-hotsite/award-hotsite.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AwardHotsiteComponent } from '../core/hotsite/award-hotsite/award-hotsi
   imports: [
     CommonModule,
     GalleryModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    RouterModule
   ]
 })
 export class HotsiteModule { }

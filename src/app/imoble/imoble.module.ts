@@ -11,6 +11,7 @@ import { WhoComponent } from '../core/imobles/who/who.component';
 import { ContactComponent } from '../core/imobles/contact/contact.component';
 import { CasesComponent } from '../core/imobles/cases/cases.component';
 import { RouterModule } from '@angular/router';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    ScrollToModule.forRoot(),
     RouterModule
   ]
 })
