@@ -6,7 +6,8 @@ import { HotsiteComponent } from './hotsite/hotsite.component';
 const routes: Routes = [
   {path: '', redirectTo: 'imobles', pathMatch: 'full' },
   {path: 'imobles', component: ImobleComponent},
-  {path: 'terramundieldorado', component: HotsiteComponent}
+  {path: 'terramundieldorado', component: HotsiteComponent},
+  {path: '**', redirectTo: 'imobles', pathMatch: 'full' }
 ];
 
 @NgModule({
